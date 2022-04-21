@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Lato:wght@300;400&family=Merriweather+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&family=Oxygen+Mono&family=Oxygen:wght@300;400;700&family=Sacramento&display=swap');
+:root{
+    --ff-1: 'Cinzel Decorative', cursive;
+    --ff-2: 'Lato', sans-serif;
+    --ff-3: 'Merriweather Sans', sans-serif;
+    --ff-4: 'Montserrat', sans-serif;
+    --ff-5: 'Oxygen', sans-serif;
+    --ff-6: 'Oxygen Mono', monospace;
+    --ff-7: 'Sacramento', cursive;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+body{
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    color: white;
+    font-family: var(--ff-4);
+}
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}   
+h1{
+    text-align: center;
+    font-size: 1.5rem;
+}
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+    border-radius: 2px;
+
+}
+input:focus {
+	outline: none;
+  	border: 1px solid #ff6f47;
+}
+form input{
+    font-size: 1rem;
+    padding: 1.1rem;
+}
+form button{
+   
+    color: #fda085;
+    background: white;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+form button:hover{
+    background: #fda085;
+    color: white;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.todo-list{
+ min-width: 30%;
+   
+}
+.todo{
+   margin: 0.5rem;
+   background: white;
+   color: black;
+   font-size: 1.5rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: all .5s ease; 
+}
+.todo li{
+    flex: 1;
+}
+.completed-btn, .trash-btn{
+    background: #ff6f47;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.completed-btn{
+    background: rgb(235, 218, 68);
+}
+.todo-item{
+    padding: 0rem .5rem;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5 ;
+}
+
+.fall{
+    transform: translateX(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border: none;
+    
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after{
+    content: '\25bc';
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
+.select:hover::after{
+    background: #f6d365;
+    color: white;
+}
